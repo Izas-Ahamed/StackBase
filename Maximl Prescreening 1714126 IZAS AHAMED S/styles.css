@@ -1,0 +1,29 @@
+.head{
+    
+    background-color: sandybrown;
+}
+body{
+    background-color: lightgoldenrodyellow;
+}
+h1
+{
+   color: rgb(54, 38, 25);
+}
+.Formdiv
+{ margin: auto;
+  width: 40%;
+ background-color: #D3D3D3;
+ 
+padding: 10px;
+ border-radius: 2%;
+}
+.error
+{
+    height: 10%;
+}
+input{
+    border: 0px;
+    border-radius: 10%;
+    background-color: lavender;
+
+}

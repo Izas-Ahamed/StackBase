@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<script src="angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="app.js"></script>
+<body>
+<div class="head">
+<h1>Form Validation</h1>
+</div>
+<div class="Formdiv">
+    
+    <form name="Validation" novalidate>
+        <pre>
+                      <input type="text" placeholder="Name" id="n" name="name" ng-model="Valid.name" ng-required="true"/>
+                      <div  ng-show="Validation.name.$touched && Validation.name.$invalid">  <small style="color: red; display: block;text-align: center;">Enter A Valid Name</small></div>
+                      <input type="text" placeholder="PhoneNo" id="p" name="phoneno" ng-model="Valid.phoneno" ng-required="true" ng-minlength="10" ng-maxlength="10"/>
+                      <div  ng-show="Validation.phoneno.$touched && Validation.phoneno.$invalid"><small style="color: red; display: block;text-align: center;">Enter A Valid PhoneNo</small></div>
+                      <input type="email" placeholder="Email Id" id="e" name="email" ng-model="Valid.email" ng-required="true"/>
+                      <div  ng-show="Validation.email.$touched && Validation.email.$invalid"><small style="color: red; display: block;text-align: center;">Enter A Valid Email</small></div>
+                      <input type="text" placeholder="City" name="city" id="c" ng-model="Valid.city" ng-required="true" ng-minlength="3"/>
+                      <div  ng-show="Validation.city.$touched && Validation.city.$invalid"><small style="color: red; display: block;text-align: center;">City Name Needs Atleast 3 Characters</small></div>
+                      <input type="text" placeholder="PinCode" name="pincode"id="pc" ng-model="Valid.pincode" ng-required="true"ng-minlength="6" ng-maxlength="6"/>
+                      <div  ng-show="Validation.pincode.$touched && Validation.pincode.$invalid"><small style="color: red; display: block;text-align: center;">Enter A Valid PinCode</small></div>
+                      <input type="submit" onclick="myfun()" ng-disabled="Validation.$invalid" value="submit">
+    
+    </pre>
+    </form>
+    
+
+</div>
+
+</body>
+</html>
